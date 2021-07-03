@@ -457,7 +457,7 @@ const charts_options = {
         series.push({
           name: city_item,
           type: 'line',
-          stack: line_title,
+          // stack: line_title,
           data: city_total,
         })
       }
