@@ -1,6 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2021-02-02 17:21:01
+ * @LastEditTime: 2021-07-17 10:19:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \DanBianHuan\src\service\service.js
+ */
+/*
+ * @Author: your name
+ * @Date: 2021-02-02 17:21:01
  * @LastEditTime: 2021-06-10 15:51:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
@@ -202,5 +210,27 @@ export async function loginData(usr_name,usr_pwd) {
 
   // console.log(JSON.stringify(props));
   return rtn;
+
+}
+
+export async function getGdzjResult(props) {
+  // http://188.0.59.193:9851/alarm/updateTransAlarm
+  // {"fp":"1000436334|527017290|2623405475|3603349020","manage_log":"1122222"}
+  // const props = {"fps":fps,"manage_log":manage_log, "cancel_time": cancel_time};
+  const url = URL_List.Gdzj;
+  const params_temp = {
+    method: 'POST',
+    mode: "cors",
+    timeout: 0,
+    headers: {
+      // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(props),
+  };
+
+  return request(url, params_temp).catch(err => {
+    alert('查询后台数据失败.具体原因：\n' + err);
+  });
 
 }
