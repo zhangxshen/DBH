@@ -9,6 +9,7 @@ const UrlList = {
   "getTransAlarmCount" : "http://188.0.52.108:5354/php_api/robot_project/getTransAlarmCount.php",
   "getEomsMenuOrTicket":"http://188.0.52.108:5354/eoms/getMenuOrTicket_grantTicket.action",
   "uploadPic": "http://188.0.59.193:9851/pic/uploadPic",
+  "Gdzj":"http://188.0.59.193:9851/gdzj/getGdzjResult"
   // "Login" : "http://188.0.59.193:7001/boco/login",
 };
 
